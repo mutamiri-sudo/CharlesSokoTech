@@ -1,15 +1,19 @@
 # "$38 Billion Opportunity" — AI-Co-Authored Published Book
 
 *A Beginner's Guide to Winning DLA Contracts*
-**Published under a pen name on Amazon**
+**Published under the pen name [Marcus Grant](https://a.co/d/0cbzWrju) on Amazon**
+
+[![The $38 Billion Opportunity — Amazon listing](../assets/dla-book-amazon.png)](https://a.co/d/0cbzWrju)
+
+🔗 **Buy on Amazon:** https://a.co/d/0cbzWrju
 
 ---
 
 ## What This Is
 
-A full-length published guide on how small and mid-size businesses can win Defense Logistics Agency (DLA) contracts. The DLA manages over **$38 billion in annual procurement** — most of it won by a small pool of familiar contractors because the on-ramp (SAM registration, CAGE codes, DIBBS navigation, past-performance building) is opaque to newcomers. This book makes that on-ramp legible.
+A full-length published guide on how small and mid-size businesses can win Defense Logistics Agency (DLA) contracts. The DLA spends over **$100 million/day** buying parts, supplies, and materials from small businesses — most of it won by a small pool of familiar contractors because the on-ramp (SAM registration, CAGE codes, DIBBS navigation, past-performance building) is opaque to newcomers. This book makes that on-ramp legible.
 
-Available on Amazon in paperback ($34.99) and Kindle ($9.99) under a pen name.
+Available on Amazon in paperback ($34.99), large print, and Kindle ($9.99 or free on Kindle Unlimited) under the pen name Marcus Grant. Published April 8, 2026.
 
 ---
 
@@ -52,4 +56,5 @@ The book is the demand-generation engine — low-cost entry that pre-qualifies b
 
 ## Available On
 
-Amazon — search "$38 Billion Opportunity" (published under pen name Marcus Grant).
+🔗 **Amazon:** https://a.co/d/0cbzWrju
+Published under the pen name **Marcus Grant**.
