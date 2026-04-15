@@ -8,29 +8,30 @@ I build and ship production AI-powered products — from concept through deploym
 
 ## Featured Projects
 
-### 1. Insurance City — PHA Email Campaign (LLM + Agentic Orchestration) ⭐
-**Stack:** Anthropic Claude · Node.js · Nodemailer · Office 365 SMTP · Vercel · Calendly API
+### 1. Insurance City — AI-Powered Marketing Consultation ⭐
+**Engagement:** Marketing consultation for an independent insurance agency in Dallas
+**Stack:** Anthropic Claude · Node.js · HawkSoft API · Nodemailer · Office 365 SMTP · Vercel · Calendly
 
-An LLM-orchestrated outbound campaign platform built for a commercial insurance brokerage to reach **649 Public Housing Authorities across Texas, Oklahoma, and Louisiana** with personalized property-insurance renewal outreach.
+A two-phase consulting engagement for a two-person Dallas independent insurance agency with a licensed territory across Texas, Oklahoma, and Louisiana. Scoped, built, and delivered solo.
 
-**What the system does:**
-- LLM layer (Claude) handles judgment work: contact segmentation (Tier B mid-size vs. Tier C small), sequence copy generation in the client's voice, brand-voice review before send
-- Deterministic execution engine handles the rest: JSON-backed state tracker, ramp-up scheduler (25 → 35 → 50 sends/day to protect domain reputation), SMTP sender with per-send dedup and PID-based process lock, Vercel-hosted live dashboard
-- Bookings flow to Calendly → client's Outlook calendar automatically
-- Replies monitored through shared Sales inbox
+**Phase 1 — Real-time operations dashboard.** Replaced ten hours/week of manual spreadsheet reporting with a live dashboard pulling directly from their HawkSoft agency management system. Five pipelines (New Business, Cancellations, Pending Renewals, Pipeline, Agency Performance) auto-refreshed every morning.
 
-**Architecture decision worth calling out:** I kept the LLM out of the send loop. It drafts, reviews, and segments — but a deterministic scheduler decides *when* anything goes out. That separation is what makes the system safe to run unattended on a 30-day schedule for a non-technical client.
+**Phase 2 — AI-powered outbound campaign.** Designed and built an LLM-orchestrated email system to reach **649 Public Housing Authorities** across their territory with personalized property-insurance renewal outreach — a volume the two-person shop could never reach manually.
+
+**The AI architecture worth calling out:** I kept the LLM out of the send loop. Claude handles judgment — contact segmentation, sequence copy, brand-voice review. A deterministic Node.js engine handles execution — daily ramp-up (25 → 35 → 50/day), state tracking, deliverability safeguards, per-send dedup, process locking. The founder monitors both phases through **live real-time dashboards** — no logins, always fresh.
 
 **Outcomes:**
-- Live since April 15, 2026 — running unattended on a 30-day schedule
-- Day 1: 25 PHAs reached, 0 bounces
-- Replaced ~3 weeks of manual outreach work
-- $0/mo SaaS cost (chose custom Node.js sender over Instantly.ai for audit-trail control)
+- Dashboard: eliminated ~10 hrs/week of manual reporting
+- Campaign: live since Apr 15, 2026 — running unattended on a 30-day schedule
+- Day 1: 25 PHAs reached, 0 bounces, $0/mo SaaS cost
+- Replaced an estimated 3 weeks of manual outreach work
+- Full audit trail — every send timestamped and recoverable
 
-🔗 **Live Dashboard:** [campaign-dashboard-mu-two.vercel.app](https://campaign-dashboard-mu-two.vercel.app)
-🔗 **Landing Page:** [insurance-city-nextjs.vercel.app](https://insurance-city-nextjs.vercel.app)
+🔗 **Campaign Dashboard (live metrics):** [campaign-dashboard-mu-two.vercel.app](https://campaign-dashboard-mu-two.vercel.app)
+🔗 **Ops Dashboard:** [hawksoft-dashboard.vercel.app](https://hawksoft-dashboard.vercel.app)
+🔗 **Agency Landing Page:** [insurance-city-nextjs.vercel.app](https://insurance-city-nextjs.vercel.app)
 
-📂 [View project details →](projects/insurance-city-pha-campaign.md)
+📂 [View full case study →](projects/insurance-city-pha-campaign.md)
 
 ---
 
@@ -65,31 +66,7 @@ In my day job as a PO, writing Gherkin scenarios for a full backlog was one of t
 
 ---
 
-### 4. Insurance City — Agentic Operations Dashboard
-**Stack:** Node.js · Express · React · HawkSoft API · REST APIs
-
-A real-time operations dashboard built for the same client as Project 1. Replaced manual spreadsheet tracking with automated, live data pipelines.
-
-**What it does:**
-- Automates 5 data pipelines: New Business, Cancellations, Pending Renewals, Pipeline, and Agency Performance
-- Pulls live data from HawkSoft API every morning — zero manual effort
-- Eliminated 10 hours/week of manual reporting
-
-**Architecture:**
-```
-HawkSoft API → Node.js/Express Backend → REST API → React Frontend
-     ↓                                                    ↓
-  Scheduled Jobs                                    Live Dashboard
-  (Auto-refresh)                                   (Agency Staff)
-```
-
-🔗 **Live:** [hawksoft-dashboard.vercel.app](https://hawksoft-dashboard.vercel.app)
-
-📂 [View project details →](projects/insurance-city-dashboard.md)
-
----
-
-### 5. SAFe Cert RAG — Retrieval-Augmented Study Assistant
+### 4. SAFe Cert RAG — Retrieval-Augmented Study Assistant
 **Stack:** Node.js · React · RAG Architecture · Vector Embeddings · Claude API
 
 A RAG-powered Q&A tool I built while studying for SAFe Practitioner 6.0 certification. Ingests the SAFe reference library, embeds it, and answers exam-style questions with citations back to source material.
@@ -98,7 +75,7 @@ A RAG-powered Q&A tool I built while studying for SAFe Practitioner 6.0 certific
 
 ---
 
-### 6. VOLT Supply — E-Commerce Backend & Product Sync Engine
+### 5. VOLT Supply — E-Commerce Backend & Product Sync Engine
 **Stack:** JavaScript · Shopify API · DigiKey API · Railway · Node.js
 
 Backend system for an electronics supply e-commerce store. Automates product catalog management, pricing, and inventory sync between DigiKey (distributor) and Shopify (storefront).
@@ -113,7 +90,7 @@ Backend system for an electronics supply e-commerce store. Automates product cat
 
 ---
 
-### 7. NeuroTracker Africa — Affiliate Landing Page & Funnel
+### 6. NeuroTracker Africa — Affiliate Landing Page & Funnel
 **Stack:** Next.js · Vercel · Conversion-optimized copy · AI-assisted content
 
 A conversion-optimized affiliate landing page for a cognitive-training platform launching into the African market. Built end-to-end — copy, design, deploy, analytics.
@@ -124,7 +101,7 @@ A conversion-optimized affiliate landing page for a cognitive-training platform 
 
 ---
 
-### 8. DLA GovCon Course — Productized Consulting Offering
+### 7. DLA GovCon Course — Productized Consulting Offering
 **Stack:** Course production · Sales funnel · Marketing automation
 
 A 7-module course teaching small businesses how to win Defense Logistics Agency contracts. Three tiers ($297 / $997 / $2,497) with an upsell pipeline from the companion published book.
@@ -133,7 +110,7 @@ A 7-module course teaching small businesses how to win Defense Logistics Agency 
 
 ---
 
-### 9. HVAC Website — Client Service Platform
+### 8. HVAC Website — Client Service Platform
 **Stack:** AI-Native Development · Lovable · Vercel
 
 A client-facing website for an HVAC services business, built using AI-native development tools. Translated business requirements directly into deployed software using Lovable. Demonstrates rapid prototyping and AI-assisted product delivery.
@@ -142,7 +119,7 @@ A client-facing website for an HVAC services business, built using AI-native dev
 
 ---
 
-### 10. "$38 Billion Opportunity" — Published Book
+### 9. "$38 Billion Opportunity" — Published Book
 **Format:** Published Book (Amazon)
 
 *A Beginner's Guide to Winning DLA Contracts* — Translated complex government procurement processes into a clear, actionable framework. Demonstrates end-to-end product ownership from concept to market.
