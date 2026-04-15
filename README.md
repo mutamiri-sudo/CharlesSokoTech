@@ -127,10 +127,14 @@ A 7-module course teaching small businesses how to win Defense Logistics Agency 
 
 ---
 
-### 8. HVAC Website — Client Service Platform
-**Stack:** AI-Native Development · Lovable · Vercel
+### 8. HVAC Lead-Gen Website — Built & Listed for Sale on Flippa
+**Stack:** WordPress · Elementor · SEO · Conversion-focused UX
 
-A client-facing website for an HVAC services business, built using AI-native development tools. Translated business requirements directly into deployed software using Lovable. Demonstrates rapid prototyping and AI-assisted product delivery.
+A turnkey HVAC lead-generation website built from scratch as a productized digital asset — not a client engagement. SEO-optimized, mobile-responsive, conversion-focused. Listed on [Flippa](https://flippa.com/12756707-turnkey-hvac-lead-generation-website-on-wordpress-elementor-seo-optimized-mobile-responsive-conversion-focused-ready-to-monetize-in-a-288b-industry) for resale to local HVAC operators, agencies, or affiliate buyers wanting a plug-and-play lead funnel in a $288B industry.
+
+Demonstrates a different skill from consulting work: niche selection, end-to-end product ownership, and packaging for resale.
+
+🔗 **Flippa Listing:** [View asset →](https://flippa.com/12756707-turnkey-hvac-lead-generation-website-on-wordpress-elementor-seo-optimized-mobile-responsive-conversion-focused-ready-to-monetize-in-a-288b-industry)
 
 📂 [View project details →](projects/hvac-website.md)
 
