@@ -1,5 +1,6 @@
 # Insurance City — AI-Powered Marketing Consultation
 
+**Client:** [Insurance City](https://theinsurancecity.com/) — theinsurancecity.com
 **Engagement type:** Marketing consultation for a multi-million dollar insurance brokerage in Dallas
 **Role:** Solo consultant — strategy, build, deployment, ongoing delivery
 **Status:** Live in production since April 2026

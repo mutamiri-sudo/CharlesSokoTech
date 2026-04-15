@@ -8,8 +8,8 @@ I build and ship production AI-powered products — from concept through deploym
 
 ## Featured Projects
 
-### 1. Insurance City — AI-Powered Marketing Consultation ⭐
-**Engagement:** Marketing consultation for a multi-million dollar insurance brokerage in Dallas
+### 1. [Insurance City](https://theinsurancecity.com/) — AI-Powered Marketing Consultation ⭐
+**Engagement:** Marketing consultation for a multi-million dollar insurance brokerage in Dallas — [theinsurancecity.com](https://theinsurancecity.com/)
 **Stack:** Anthropic Claude · Node.js · HawkSoft API · Nodemailer · Office 365 SMTP · Vercel · Calendly
 
 A two-phase consulting engagement for a Dallas-based multi-million dollar independent insurance brokerage with a licensed territory across Texas, Oklahoma, and Louisiana. Scoped, built, and delivered solo.
