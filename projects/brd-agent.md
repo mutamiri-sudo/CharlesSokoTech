@@ -1,35 +1,37 @@
-# BRD Agent — AI-Powered Business Requirements Document Generator
+# BRD Agent — AI-Powered Business Requirements Breakdown
 
 ## Overview
-A production LLM-powered agent that automates the most time-consuming part of product and business analysis work: writing structured Business Requirements Documents (BRDs). Built on the Claude API with custom prompt architecture designed for regulated financial services environments.
+A production LLM-powered agent that takes a Business Requirements Document (BRD) and breaks it down into the sprint-ready artifacts a delivery team actually works from — epics, user stories, acceptance criteria, Gherkin test scenarios, and compliance flags. Built on the Claude API with custom prompt architecture designed for regulated financial services environments.
 
 ## Problem
-Business analysts and product managers spend hours writing BRDs — business context, stakeholder needs, functional and non-functional requirements, user stories, acceptance criteria, and test scenarios — often repeating patterns across similar initiatives. In regulated industries (fintech, insurance, mortgage), every requirement also needs compliance flags and audit-ready documentation.
+BRDs are dense. They capture *what the business needs* but not *what the team builds next sprint*. Translating a BRD into a structured backlog — epics, stories, acceptance criteria, test scenarios — is one of the most time-consuming parts of product management and business analysis. In regulated industries (fintech, insurance, mortgage), each story also needs compliance flags and audit-ready traceability back to the BRD it came from.
 
 ## Solution
-The BRD Agent takes a single business problem statement and generates a complete, sprint-ready BRD:
+Feed the agent a BRD. It returns a complete, sprint-ready breakdown:
 
 | Output | Description |
 |--------|-------------|
-| Executive Summary | Business context, objective, and stakeholder alignment |
-| Scope & Assumptions | In-scope / out-of-scope boundaries, dependencies, constraints |
-| Functional Requirements | What the system must do, mapped to business outcomes |
-| Non-Functional Requirements | Performance, security, compliance, availability |
-| User Stories | Structured "As a / I want / So that" with acceptance criteria |
+| Strategic Theme | Business context pulled from the BRD, aligned to stakeholder objectives |
+| Epics | High-level feature groupings derived from BRD sections |
+| User Stories | Structured "As a / I want / So that" with clear ownership |
+| Acceptance Criteria | Testable conditions for each story |
 | Gherkin Scenarios | Given/When/Then test cases for QA handoff |
-| Compliance Flags | Regulatory considerations for fintech / insurance / mortgage |
-| Success Metrics | KPIs and measurement criteria tied back to the business objective |
+| Compliance Flags | Regulatory considerations surfaced from BRD language |
+| Traceability | Each story linked back to the BRD section it originated from |
+| Success Metrics | KPIs and measurement criteria tied to business outcomes |
 
 ## Technical Approach
-- **Prompt Architecture:** Multi-stage prompt chain with context injection from uploaded source documents
-- **AI Evals:** Automated output validation pipeline that checks generated requirements against quality standards
-- **Context Management:** RAG-adjacent patterns — structured system prompts grounding LLM outputs in source documents to reduce hallucinations
-- **Human-in-the-Loop:** Review checkpoints before any output reaches downstream systems
+- **Prompt Architecture:** Multi-stage prompt chain that first parses the BRD into structured sections, then decomposes each section into backlog artifacts
+- **Context Injection:** Full BRD loaded into context so every generated story is grounded in source language — reduces hallucinated requirements
+- **AI Evals:** Automated validation pipeline checks every story against quality standards (testability, clarity, INVEST criteria)
+- **Traceability:** Every output artifact carries a reference back to the BRD line or section it was derived from — audit-ready by default
+- **Human-in-the-Loop:** Review checkpoints before any output reaches the team's tracker (Jira, Azure DevOps, Linear)
 
 ## Results
-- 60% reduction in BRD and user-story writing time
-- Consistent output quality across different business domains
+- 60% reduction in BRD-to-backlog translation time
+- Consistent output quality across different product domains
 - Compliance-aware outputs for regulated environments
+- Full BRD → story traceability with no manual mapping
 
 ## Stack
 Claude API · Node.js · Prompt Engineering · AI Evals · Context Engineering
