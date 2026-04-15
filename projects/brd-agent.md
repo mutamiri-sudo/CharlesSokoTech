@@ -1,37 +1,66 @@
-# BRD Agent — AI-Powered Business Requirements Breakdown
+# BRD Agent — AI-Automated Requirements-to-Backlog Pipeline
 
 ## Overview
-A production LLM-powered agent that takes a Business Requirements Document (BRD) and breaks it down into the sprint-ready artifacts a delivery team actually works from — epics, user stories, acceptance criteria, Gherkin test scenarios, and compliance flags. Built on the Claude API with custom prompt architecture designed for regulated financial services environments.
+A Claude Code–powered agent that automates the entire manual path from a Business Requirements Document (BRD) to a fully-structured Jira backlog. The agent reads the BRD, creates features in Jira, and breaks each feature down into epics, user stories, acceptance criteria, and Gherkin test scenarios — end-to-end, with zero manual data entry.
 
-## Problem
-BRDs are dense. They capture *what the business needs* but not *what the team builds next sprint*. Translating a BRD into a structured backlog — epics, stories, acceptance criteria, test scenarios — is one of the most time-consuming parts of product management and business analysis. In regulated industries (fintech, insurance, mortgage), each story also needs compliance flags and audit-ready traceability back to the BRD it came from.
+Fully customizable: plug in your own BRD templates, your team's story-writing conventions, your Jira project schema, and your compliance rules.
 
-## Solution
-Feed the agent a BRD. It returns a complete, sprint-ready breakdown:
+## The Manual Process This Replaces
 
-| Output | Description |
-|--------|-------------|
-| Strategic Theme | Business context pulled from the BRD, aligned to stakeholder objectives |
-| Epics | High-level feature groupings derived from BRD sections |
-| User Stories | Structured "As a / I want / So that" with clear ownership |
-| Acceptance Criteria | Testable conditions for each story |
-| Gherkin Scenarios | Given/When/Then test cases for QA handoff |
-| Compliance Flags | Regulatory considerations surfaced from BRD language |
-| Traceability | Each story linked back to the BRD section it originated from |
-| Success Metrics | KPIs and measurement criteria tied to business outcomes |
+Before this agent, the workflow looked like this:
+
+1. Read the BRD (2–4 hours for a real one)
+2. Identify features
+3. Manually create each feature in Jira — title, description, priority, labels
+4. For every feature, draft user stories
+5. Manually create each story — paste the "As a / I want / So that," add acceptance criteria
+6. Write Gherkin scenarios for QA handoff
+7. Link stories back to the right feature, epic, and BRD section for traceability
+8. Tag compliance-relevant stories for regulatory review
+
+For a typical BRD that's **1–2 weeks of PO/BA time** — and it's error-prone (dropped AC, missing compliance tags, broken traceability).
+
+## What the Agent Does Instead
+
+Feed it the BRD. Claude Code automates the rest:
+
+| Stage | What's Automated |
+|-------|------------------|
+| BRD Parsing | Parses the BRD into structured sections (scope, functional requirements, NFRs, compliance) |
+| Feature Creation | Creates the feature records directly in Jira via API |
+| Story Decomposition | Breaks each feature into user stories with "As a / I want / So that" structure |
+| Acceptance Criteria | Generates testable AC for every story |
+| Gherkin Scenarios | Writes Given/When/Then test cases for QA handoff |
+| Compliance Flags | Tags stories touching regulated areas (fintech, insurance, mortgage) |
+| Traceability | Every story linked back to the BRD section it came from — audit-ready by default |
+| Story Creation | Writes stories into Jira with proper epic/feature parent links |
+
+## Customizable
+
+The agent is built as a configurable pipeline, not a one-off script:
+
+- **Story-writing conventions:** plug in your team's definition of ready, INVEST standards, preferred voice
+- **Jira schema:** configure project key, issue types, custom fields, workflows
+- **BRD templates:** tune the parser for your org's BRD format (or bring your own sections)
+- **Compliance rules:** add your own regulatory tags (SOX, HIPAA, NAIC, CFPB, etc.)
+- **QA handoff format:** Gherkin, plain AC, test-case format — pick what your team uses
+
+Same architectural principle I use everywhere: **LLM for judgment, deterministic code for execution.** Claude handles the decomposition and language. A deterministic Jira integration layer handles the API calls, field mapping, and linking.
 
 ## Technical Approach
-- **Prompt Architecture:** Multi-stage prompt chain that first parses the BRD into structured sections, then decomposes each section into backlog artifacts
-- **Context Injection:** Full BRD loaded into context so every generated story is grounded in source language — reduces hallucinated requirements
-- **AI Evals:** Automated validation pipeline checks every story against quality standards (testability, clarity, INVEST criteria)
-- **Traceability:** Every output artifact carries a reference back to the BRD line or section it was derived from — audit-ready by default
-- **Human-in-the-Loop:** Review checkpoints before any output reaches the team's tracker (Jira, Azure DevOps, Linear)
+- **Multi-stage prompt chain:** parse BRD → identify features → decompose into stories → validate against quality standards
+- **Context injection:** full BRD loaded so every generated story is grounded in source language — no hallucinated requirements
+- **Jira REST API integration:** direct writes for features, stories, AC, Gherkin, labels, parent links
+- **AI Evals:** automated validation checks every story against INVEST / testability / clarity standards before it's written to Jira
+- **Human-in-the-Loop:** review checkpoint before anything hits the Jira project — nothing writes without PO approval
+- **Traceability engine:** every story carries a reference back to the BRD line or section it was derived from
 
 ## Results
-- 60% reduction in BRD-to-backlog translation time
+- **Replaces 1–2 weeks of manual PO/BA work per BRD** with an automated pipeline
 - Consistent output quality across different product domains
 - Compliance-aware outputs for regulated environments
-- Full BRD → story traceability with no manual mapping
+- Full BRD → feature → story → AC → Gherkin traceability, no manual mapping
+- Customizable to any team's conventions, tools, and regulatory context
 
 ## Stack
-Claude API · Node.js · Prompt Engineering · AI Evals · Context Engineering
+Claude Code · Claude API · Node.js · Jira REST API · Prompt Engineering · AI Evals · Context Engineering

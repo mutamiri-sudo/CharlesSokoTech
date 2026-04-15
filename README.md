@@ -40,16 +40,21 @@ A two-phase consulting engagement for a Dallas-based multi-million dollar indepe
 
 ---
 
-### 2. BRD Agent — AI-Powered Business Requirements Breakdown
-**Stack:** Claude API · Node.js · Prompt Engineering · AI Evals
+### 2. BRD Agent — AI-Automated Requirements-to-Backlog Pipeline
+**Stack:** Claude Code · Claude API · Node.js · Jira REST API · Prompt Engineering · AI Evals
 
-An LLM-powered agent that takes a Business Requirements Document (BRD) and breaks it down into sprint-ready artifacts — epics, user stories with acceptance criteria, Gherkin test scenarios, compliance flags, and full BRD-to-story traceability. Built for fintech / regulated environments where audit trails matter.
+A Claude Code–powered agent that automates the entire manual workflow of turning a Business Requirements Document into a fully-structured Jira backlog. Instead of a PO / BA spending 1–2 weeks manually adding requirements to Jira as features and then breaking them down into user stories, the agent does it end-to-end:
 
-**How it works:**
-- Multi-stage prompt chain: parse the BRD → decompose into epics → generate stories + AC + Gherkin
-- Every story is linked back to the BRD section it originated from — traceability is baked in
-- Automated AI eval pipeline validates outputs against INVEST / testability / clarity standards
-- Reduced BRD-to-backlog translation time by 60% in production use
+- Parses the BRD into structured sections
+- Creates features in Jira directly via API
+- Breaks each feature down into user stories with acceptance criteria
+- Generates Gherkin test scenarios for QA handoff
+- Tags compliance-relevant stories for regulatory review
+- Links everything back to the BRD section it came from (audit-ready traceability)
+
+**Customizable:** plug in your own BRD templates, Jira schema, story-writing conventions, and compliance rules (SOX, HIPAA, NAIC, CFPB, etc.).
+
+**Architectural principle:** LLM for judgment, deterministic code for execution. Claude handles decomposition and language. A deterministic Jira integration layer handles the API calls and linking. Human-in-the-loop checkpoint before anything writes to Jira.
 
 📂 [View project details →](projects/brd-agent.md)
 
