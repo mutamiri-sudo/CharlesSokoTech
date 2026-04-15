@@ -24,6 +24,8 @@ Tare had affiliate access to NeuroTracker — a cognitive-training platform with
 
 ## Outcome
 
+![NeuroTracker landing page](../assets/neurotracker.png)
+
 🔗 **Live:** https://neurotrackerx-landing.vercel.app
 
 Page is in market, driving traffic through Tare's paid and organic channels. Lightweight engagement — I built, he runs.

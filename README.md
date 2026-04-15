@@ -12,6 +12,9 @@ I build and ship production AI-powered products — from concept through deploym
 **Engagement:** Marketing consultation for a multi-million dollar insurance brokerage in Dallas — [theinsurancecity.com](https://theinsurancecity.com/)
 **Stack:** Anthropic Claude · Node.js · HawkSoft API · Nodemailer · Office 365 SMTP · Vercel · Calendly
 
+![Insurance City Campaign Dashboard — live real-time metrics](assets/campaign-dashboard.png)
+*Live campaign dashboard: emails sent, contacts reached, replies, conversions, bounces — all updating in real time.*
+
 A two-phase consulting engagement for a Dallas-based multi-million dollar independent insurance brokerage with a licensed territory across Texas, Oklahoma, and Louisiana. Scoped, built, and delivered solo.
 
 **Phase 1 — Real-time operations dashboard.** Replaced ten hours/week of manual spreadsheet reporting with a live dashboard pulling directly from their HawkSoft agency management system. Five pipelines (New Business, Cancellations, Pending Renewals, Pipeline, Agency Performance) auto-refreshed every morning.
@@ -35,6 +38,7 @@ A two-phase consulting engagement for a Dallas-based multi-million dollar indepe
 🔗 **Campaign Dashboard (live metrics):** [campaign-dashboard-mu-two.vercel.app](https://campaign-dashboard-mu-two.vercel.app)
 🔗 **Ops Dashboard:** [hawksoft-dashboard.vercel.app](https://hawksoft-dashboard.vercel.app)
 🔗 **Agency Landing Page:** [insurance-city-nextjs.vercel.app](https://insurance-city-nextjs.vercel.app)
+🔗 **Client Site:** [theinsurancecity.com](https://theinsurancecity.com/)
 
 📂 [View full case study →](projects/insurance-city-pha-campaign.md)
 
@@ -105,6 +109,8 @@ Backend system for an electronics supply e-commerce store. Automates product cat
 **Stack:** Next.js · Vercel · Conversion-optimized copy · AI-assisted content
 
 A conversion-optimized affiliate landing page for a cognitive-training platform targeting high-performance sports audiences. Built end-to-end — copy, design, deploy, analytics.
+
+![NeuroTracker landing page](assets/neurotracker.png)
 
 🔗 **Live:** [neurotrackerx-landing.vercel.app](https://neurotrackerx-landing.vercel.app)
 

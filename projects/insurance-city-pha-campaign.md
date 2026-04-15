@@ -6,6 +6,9 @@
 **Status:** Live in production since April 2026
 **Stack:** Anthropic Claude · Node.js · Nodemailer · Office 365 · HawkSoft API · Vercel · Calendly
 
+![Insurance City website — theinsurancecity.com](../assets/insurance-city-site.png)
+*The client: Insurance City, an independent insurance brokerage serving TX/OK/LA.*
+
 ---
 
 ## The Story
@@ -41,6 +44,9 @@ HawkSoft API  →  Node.js / Express  →  REST API  →  React Frontend
 Scheduled Jobs                                    Live Dashboard
 (auto-refresh)                                    (agency staff)
 ```
+
+![HawkSoft Operations Dashboard](../assets/hawksoft-dashboard.png)
+*Phase 1 — Real-time operations dashboard pulling live data from HawkSoft.*
 
 **Outcome:** Eliminated ten hours/week of manual reporting. The founder now starts Monday with the agency's pulse on screen, not in a spreadsheet.
 
@@ -112,6 +118,12 @@ The campaign dashboard shows, live, without any login:
 - **Campaign health signals** — bounce rate, reply rate, opt-out rate
 
 The founder can open it on his phone between meetings and know exactly where the campaign stands.
+
+![PHA Campaign Dashboard — real-time metrics](../assets/campaign-dashboard.png)
+*Phase 2 — Live campaign dashboard: 49 emails sent, 25 contacts reached, 624 PHAs remaining in queue, zero bounces.*
+
+![Agency landing page — insurance-city-nextjs.vercel.app](../assets/agency-landing.png)
+*Custom agency landing page serving as the destination for campaign CTAs.*
 
 🔗 **Live campaign dashboard:** https://campaign-dashboard-mu-two.vercel.app
 🔗 **Agency landing page:** https://insurance-city-nextjs.vercel.app
