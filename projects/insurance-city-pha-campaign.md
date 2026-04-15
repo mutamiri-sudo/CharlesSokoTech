@@ -1,6 +1,6 @@
 # Insurance City — AI-Powered Marketing Consultation
 
-**Engagement type:** Marketing consultation for an independent insurance agency in Dallas
+**Engagement type:** Marketing consultation for a multi-million dollar insurance brokerage in Dallas
 **Role:** Solo consultant — strategy, build, deployment, ongoing delivery
 **Status:** Live in production since April 2026
 **Stack:** Anthropic Claude · Node.js · Nodemailer · Office 365 · HawkSoft API · Vercel · Calendly
@@ -9,7 +9,7 @@
 
 ## The Story
 
-An independent insurance agency in Dallas came to me with a familiar mid-market problem: they had a strong book of business, a licensed territory that stretched across Texas, Oklahoma, and Louisiana, and two people to run it. They were doing good work for the clients they had — but every hour spent on manual reporting and outreach was an hour not spent closing new business.
+A multi-million dollar independent insurance brokerage in Dallas came to me with a familiar mid-market problem: they had a strong book of business, a licensed territory across Texas, Oklahoma, and Louisiana, and a lean team running it. They were doing good work for the clients they had — but every hour spent on manual reporting and outreach was an hour not spent closing new business.
 
 They didn't need a consultant to tell them *what* their problem was. They knew. They needed someone who could actually build the fix.
 
@@ -17,7 +17,7 @@ We scoped the engagement in two phases:
 
 **Phase 1 — See the business clearly.** Replace manual spreadsheet tracking with a real-time operations dashboard so the founder could see pipeline health, renewals, and cancellations without asking anyone.
 
-**Phase 2 — Fill the pipeline.** Launch an AI-powered outbound marketing campaign targeting a specific underserved niche — Public Housing Authorities in their licensed territory — at a volume the two-person shop could never have reached manually.
+**Phase 2 — Fill the pipeline.** Launch an AI-powered outbound marketing campaign targeting a specific underserved niche — **Public Housing Authorities (PHAs)** in their licensed territory — at a volume that would have required a dedicated business development team to execute manually.
 
 I delivered both.
 
@@ -49,7 +49,7 @@ Scheduled Jobs                                    Live Dashboard
 
 ## Phase 2 — AI-Powered Outbound Campaign
 
-With reporting handled, we turned to pipeline. The agency had identified Public Housing Authorities as an underserved niche — carriers often mispriced PHA property coverage, which meant real opportunity to win renewals. But there are **649 PHAs across Texas, Oklahoma, and Louisiana**, and reaching them all with personalized outreach in the 30-day window before Q2 renewals was impossible manually.
+With reporting handled, we turned to pipeline. The brokerage had identified **Public Housing Authorities (PHAs)** as an underserved niche — carriers often mispriced PHA property coverage, which meant real opportunity to win renewals. But there are **649 PHAs across Texas, Oklahoma, and Louisiana**, and reaching them all with personalized outreach in the 30-day window before Q2 renewals was impossible manually.
 
 This is where the AI consulting work came in.
 
@@ -147,7 +147,35 @@ Including this in the case study is intentional. Consulting clients don't buy "i
 - ✅ $0/mo SaaS cost (custom Node.js vs. Instantly.ai at $30/mo)
 - ✅ Full audit trail — every send timestamped and recoverable
 
-**Combined business outcome:** A two-person independent agency now runs its reporting on autopilot and executes enterprise-grade outbound marketing at a volume that would have required a dedicated BDR team.
+**Combined business outcome:** A multi-million dollar brokerage now runs its reporting on autopilot and executes enterprise-grade niche outbound marketing at a volume and precision that would have required a dedicated business development team.
+
+---
+
+## Next Steps — Where This Engagement Is Heading
+
+The PHA campaign is **Phase 2 of a larger build-out**. Once the 30-day run completes and we have reply / booking / conversion data, the roadmap is:
+
+### Phase 3 — Expand to other commercial lines
+The PHA playbook (niche segmentation → LLM-drafted sequences → deterministic send engine → live dashboard) is tier-agnostic. The same framework plugs into the brokerage's other commercial lines:
+- Habitational / multi-family property
+- Non-profit and social services
+- Municipal and public-sector accounts
+- Artisan contractors and trades
+- Commercial auto and fleet
+
+Each new line is a rebuild of the contact list and copy layer — the execution engine, dashboard, and deliverability infrastructure carry over.
+
+### Phase 4 — AI-enabled outbound voice calls
+Email opens the door. The biggest gap in a cold outbound funnel is the distance between "interested reply" and "actual conversation booked." I'm scoping an AI voice layer that:
+- Calls prospects who opened or replied to the email campaign
+- Qualifies them against the brokerage's ideal-customer profile in natural conversation
+- Answers baseline questions (coverage types, licensure, carrier relationships)
+- Books warm calls directly onto the producer's calendar — no human BDR needed
+
+The architectural principle stays the same: **LLM for judgment, deterministic code for execution.** The AI agent handles the conversation. A deterministic calendar-integration layer handles the booking. A compliance layer handles the "this call is being recorded" disclosure and opt-out flow.
+
+### Phase 5 — Productize the playbook
+The end-state I'm aiming for with this client is a **repeatable niche-marketing product** they can run for every vertical in their pipeline — one consultant setup cost per vertical, then the system runs itself. That's the shape of AI consulting work I find most durable: not a one-off build, but an engine the client keeps turning.
 
 ---
 

@@ -9,16 +9,21 @@ I build and ship production AI-powered products — from concept through deploym
 ## Featured Projects
 
 ### 1. Insurance City — AI-Powered Marketing Consultation ⭐
-**Engagement:** Marketing consultation for an independent insurance agency in Dallas
+**Engagement:** Marketing consultation for a multi-million dollar insurance brokerage in Dallas
 **Stack:** Anthropic Claude · Node.js · HawkSoft API · Nodemailer · Office 365 SMTP · Vercel · Calendly
 
-A two-phase consulting engagement for a two-person Dallas independent insurance agency with a licensed territory across Texas, Oklahoma, and Louisiana. Scoped, built, and delivered solo.
+A two-phase consulting engagement for a Dallas-based multi-million dollar independent insurance brokerage with a licensed territory across Texas, Oklahoma, and Louisiana. Scoped, built, and delivered solo.
 
 **Phase 1 — Real-time operations dashboard.** Replaced ten hours/week of manual spreadsheet reporting with a live dashboard pulling directly from their HawkSoft agency management system. Five pipelines (New Business, Cancellations, Pending Renewals, Pipeline, Agency Performance) auto-refreshed every morning.
 
-**Phase 2 — AI-powered outbound campaign.** Designed and built an LLM-orchestrated email system to reach **649 Public Housing Authorities** across their territory with personalized property-insurance renewal outreach — a volume the two-person shop could never reach manually.
+**Phase 2 — AI-powered outbound campaign.** Designed and built an LLM-orchestrated email system to reach **649 Public Housing Authorities (PHAs)** across their territory with personalized property-insurance renewal outreach — a volume that would have required a dedicated business development team to execute manually.
 
 **The AI architecture worth calling out:** I kept the LLM out of the send loop. Claude handles judgment — contact segmentation, sequence copy, brand-voice review. A deterministic Node.js engine handles execution — daily ramp-up (25 → 35 → 50/day), state tracking, deliverability safeguards, per-send dedup, process locking. The founder monitors both phases through **live real-time dashboards** — no logins, always fresh.
+
+**Next steps (Phase 3+):**
+- Extend the campaign framework to the brokerage's other commercial lines (habitational, non-profit, municipal, artisan contractors)
+- Layer in **AI-enabled outbound voice calls** — an AI agent that qualifies prospects, answers baseline questions, and books warm calls directly onto the producer's calendar. Email opens the door; AI voice closes the gap between interest and conversation.
+- Graduate the PHA playbook into a repeatable niche-marketing product the brokerage can run for every vertical in their pipeline
 
 **Outcomes:**
 - Dashboard: eliminated ~10 hrs/week of manual reporting
@@ -90,10 +95,10 @@ Backend system for an electronics supply e-commerce store. Automates product cat
 
 ---
 
-### 6. NeuroTracker Africa — Affiliate Landing Page & Funnel
+### 6. NeuroTracker — Affiliate Landing Page & Funnel
 **Stack:** Next.js · Vercel · Conversion-optimized copy · AI-assisted content
 
-A conversion-optimized affiliate landing page for a cognitive-training platform launching into the African market. Built end-to-end — copy, design, deploy, analytics.
+A conversion-optimized affiliate landing page for a cognitive-training platform targeting high-performance sports audiences. Built end-to-end — copy, design, deploy, analytics.
 
 🔗 **Live:** [neurotrackerx-landing.vercel.app](https://neurotrackerx-landing.vercel.app)
 
