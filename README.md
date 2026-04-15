@@ -40,17 +40,17 @@ A two-phase consulting engagement for a Dallas-based multi-million dollar indepe
 
 ---
 
-### 2. PRD Agent — AI-Powered Product Requirements Generator
+### 2. BRD Agent — AI-Powered Business Requirements Document Generator
 **Stack:** Claude API · Node.js · Prompt Engineering · AI Evals
 
-An LLM-powered agent that automates the product requirements process. Give it a business problem, and it generates epic definitions, user stories with acceptance criteria, Gherkin test scenarios, story points, priority, success metrics, and compliance/regulatory flags (built for fintech/regulated environments).
+An LLM-powered agent that automates the business analysis process. Give it a business problem, and it generates a complete Business Requirements Document — executive summary, scope, functional and non-functional requirements, user stories with acceptance criteria, Gherkin test scenarios, success metrics, and compliance/regulatory flags (built for fintech/regulated environments).
 
 **How it works:**
-- Custom prompt architecture with context injection from requirement documents
-- Automated AI eval pipeline that validates outputs against acceptance criteria
-- Reduced user story writing time by 60% in production use
+- Custom prompt architecture with context injection from source documents
+- Automated AI eval pipeline that validates outputs against BRD quality standards
+- Reduced BRD and user-story writing time by 60% in production use
 
-📂 [View project details →](projects/prd-agent.md)
+📂 [View project details →](projects/brd-agent.md)
 
 ---
 
