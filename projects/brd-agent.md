@@ -1,5 +1,8 @@
 # BRD Agent — AI-Automated Requirements-to-Backlog Pipeline
 
+**Type:** Personal project (not a client engagement)
+**Role:** Sole designer + builder
+
 ## Overview
 A Claude Code–powered agent that automates the entire manual path from a Business Requirements Document (BRD) to a fully-structured Jira backlog. The agent reads the BRD, creates features in Jira, and breaks each feature down into epics, user stories, acceptance criteria, and Gherkin test scenarios — end-to-end, with zero manual data entry.
 
@@ -54,6 +57,12 @@ Same architectural principle I use everywhere: **LLM for judgment, deterministic
 - **AI Evals:** automated validation checks every story against INVEST / testability / clarity standards before it's written to Jira
 - **Human-in-the-Loop:** review checkpoint before anything hits the Jira project — nothing writes without PO approval
 - **Traceability engine:** every story carries a reference back to the BRD line or section it was derived from
+
+## Why I Built It
+
+In my day job as a PO / BA, translating a BRD into a fully-populated Jira backlog is one of the most time-consuming ceremonies in the delivery lifecycle. I wanted to test whether Claude Code could meaningfully automate it end-to-end — not just suggest stories, but actually write them into Jira with proper linking and compliance tagging — without sacrificing quality or traceability.
+
+This agent is the proof of concept. It's a blueprint I'd extend for a client engagement where a PO/BA team is spending >20% of their time on BRD-to-backlog decomposition.
 
 ## Results
 - **Replaces 1–2 weeks of manual PO/BA work per BRD** with an automated pipeline
