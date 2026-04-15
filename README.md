@@ -140,10 +140,12 @@ Demonstrates a different skill from consulting work: niche selection, end-to-end
 
 ---
 
-### 9. "$38 Billion Opportunity" — Published Book
-**Format:** Published Book (Amazon)
+### 9. "$38 Billion Opportunity" — AI-Co-Authored Published Book
+**Format:** Published Book (Amazon, under pen name)
 
-*A Beginner's Guide to Winning DLA Contracts* — Translated complex government procurement processes into a clear, actionable framework. Demonstrates end-to-end product ownership from concept to market.
+*A Beginner's Guide to Winning DLA Contracts.* A full-length non-fiction book on winning Defense Logistics Agency contracts — **written and edited in collaboration with Claude** and published under a pen name. I owned topic selection, outline, research, fact-checking, publishing, and marketing; Claude handled drafting and editorial passes.
+
+Transparent about AI co-authorship. The book is a product experiment in using LLMs as a production tool for long-form content, and a lead magnet feeding the DLA GovCon Course.
 
 📂 [View project details →](projects/dla-book.md)
 
