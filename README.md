@@ -182,7 +182,7 @@ Transparent about AI co-authorship. The book is a product experiment in using LL
 
 ## About Me
 
-Product Manager / Product Owner / BA with **8+ years** across **Synchrony Financial, LoanDepot, KPMG, General Motors, American Express, and Ping Golf (via Insight Global)**. Now consulting as a Generative AI Product Consultant, building production AI tools and agentic systems for mid-market clients.
+Product Manager / Product Owner / BA with **8+ years** across **Synchrony Financial (formerly GE Capital), LoanDepot, KPMG, General Motors, American Express, and Ping Golf (via Insight Global)**. Now consulting as a Generative AI Product Consultant, building production AI tools and agentic systems for mid-market clients.
 
 **What I work with daily:** Claude API · Claude Code · Cursor · Lovable · Bolt.new · Prompt Engineering · Agentic Workflows · RAG Architecture · AI Evals · Node.js · React · Next.js
 
