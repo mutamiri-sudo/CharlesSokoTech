@@ -49,6 +49,14 @@ A two-phase consulting engagement for a Dallas-based multi-million dollar indepe
 
 A production-grade fintech underwriting console that evaluates retail-business creditworthiness and scans transaction streams for fraud — the kind of internal tool a BNPL provider, wholesale distributor, or merchant-finance platform would use to decide whether to extend trade credit.
 
+**Problem.** B2B trade-credit underwriting is still largely manual. A junior analyst pulls financials, calculates ratios in a spreadsheet, checks chargeback history, reads merchant notes, and writes a memo — 30–90 minutes per applicant, with inconsistent rigor across analysts and little auditability. At scale (hundreds of applications per week), the cost is either high headcount or rushed decisions that let bad accounts through — and chargebacks on extended credit run 3–5% against the book.
+
+**Market.** Mid-market lenders and payment platforms that underwrite on short cycles — BNPL providers (Affirm, Klarna, Sezzle), wholesale distributors extending net-30/60/90 terms, merchant financing platforms (Shopify Capital, Square Loans), and trade-credit insurers. Any business that has to answer *"should we extend credit to this merchant?"* more than a few times a week.
+
+**Impact hypothesis.** Decision time drops from 30–90 min → under 5 seconds. Every applicant is scored against the same rule set, so consistency improves. Fraud patterns surface at application time instead of at first chargeback. The auditable memo + signal breakdown gives compliance and appeals a defensible record. **Target:** ~10× throughput per analyst, with a ≤2% false-approve rate on the score ≥ 80 tier.
+
+**Why this architecture.** LLMs don't underwrite — rules do. The score, tier, and recommendation are deterministic pure functions (22 unit tests cover the thresholds, deduction caps, and fraud override). Claude's job is the *narrative* — translating the numbers into a decision-ready memo an analyst can read, edit, and hand to a compliance officer. This is the pattern I apply across every AI project I ship: **deterministic code for decisions that need to be right; LLM for decisions that need to sound right.**
+
 **What it does end-to-end (one API call):**
 - Ingests a business profile (revenue, expenses, tenure, chargebacks, late payments) plus recent transactions
 - Computes a 0–100 credit score + A/B/C/D tier via a **deterministic rules engine**
