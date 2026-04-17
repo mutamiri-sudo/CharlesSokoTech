@@ -44,7 +44,34 @@ A two-phase consulting engagement for a Dallas-based multi-million dollar indepe
 
 ---
 
-### 2. BRD Agent — AI-Automated Requirements-to-Backlog Pipeline
+### 2. [AI Credit Underwriter](https://credit-fraud-monitor.onrender.com) — Retail Trade-Credit & Fraud Risk Engine ⭐
+**Stack:** Node.js · Express · React · Vite · Anthropic Claude Sonnet 4.6 · Docker · Render
+
+A production-grade fintech underwriting console that evaluates retail-business creditworthiness and scans transaction streams for fraud — the kind of internal tool a BNPL provider, wholesale distributor, or merchant-finance platform would use to decide whether to extend trade credit.
+
+**What it does end-to-end (one API call):**
+- Ingests a business profile (revenue, expenses, tenure, chargebacks, late payments) plus recent transactions
+- Computes a 0–100 credit score + A/B/C/D tier via a **deterministic rules engine**
+- Scans transactions for three fraud patterns (chargeback frequency spikes, large-transaction density, refund abuse)
+- Produces an approve/review/deny recommendation — with a **fraud override** that downgrades approvals to review when fraud risk is high
+- Generates two short **AI-written underwriting memos** (credit + fraud) grounded strictly in the computed signals
+- Returns a full audit envelope: request ID, timestamp, scoring version, model name, deduction breakdown
+
+**The AI architecture worth calling out:** same principle as Insurance City — LLM for judgment, deterministic code for the math. The credit score, tier, risk levels, and recommendation are all pure functions that are **unit-testable and auditable** (22 tests cover the scoring rules, threshold caps, and fraud override edge cases). Claude writes the narrative layer on top of those numbers. When the API key is absent or the model fails, the service **falls back to a deterministic narrative with no UX regression** — the app stays fully functional without the LLM.
+
+**Production hardening:** per-IP sliding-window rate limiting, CORS allowlist, request-ID tracing in every log line and error response, React error boundary, input validation at the boundary, single-origin Dockerized deployment.
+
+![AI Credit Underwriter — underwriting decision dashboard](assets/credit-underwriter-dashboard.png)
+*Underwriting decision dashboard: score gauge, tier, recommendation, risk badges, score-breakdown waterfall, AI-written memos, and audit footer.*
+
+🔗 **Live demo:** [credit-fraud-monitor.onrender.com](https://credit-fraud-monitor.onrender.com)
+🔗 **Repo:** [github.com/mutamiri-sudo/ai-credit-underwriter](https://github.com/mutamiri-sudo/ai-credit-underwriter)
+
+> Free Render tier — cold start after 15 min idle takes ~30s.
+
+---
+
+### 3. BRD Agent — AI-Automated Requirements-to-Backlog Pipeline
 **Stack:** Claude Code · Claude API · Node.js · Jira REST API · Prompt Engineering · AI Evals
 
 A Claude Code–powered agent that automates the entire manual workflow of turning a Business Requirements Document into a fully-structured Jira backlog. Instead of a PO / BA spending 1–2 weeks manually adding requirements to Jira as features and then breaking them down into user stories, the agent does it end-to-end:
@@ -64,7 +91,7 @@ A Claude Code–powered agent that automates the entire manual workflow of turni
 
 ---
 
-### 3. Gherkin Scenario Generator — Jira / Jira Align Integration
+### 4. Gherkin Scenario Generator — Jira / Jira Align Integration
 **Stack:** Claude API · Node.js · Jira REST API · Jira Align API
 
 A personal project exploring how LLMs can cut the time Product Owners spend on test documentation. Pulls user stories and acceptance criteria from Jira / Jira Align, generates BDD-style Gherkin scenarios, and writes them back to the story.
@@ -81,7 +108,7 @@ In my day job as a PO, writing Gherkin scenarios for a full backlog was one of t
 
 ---
 
-### 4. SAFe Cert RAG — Retrieval-Augmented Study Assistant
+### 5. SAFe Cert RAG — Retrieval-Augmented Study Assistant
 **Stack:** Node.js · React · RAG Architecture · Vector Embeddings · Claude API
 
 A RAG-powered Q&A tool I built while studying for SAFe Practitioner 6.0 certification. Ingests the SAFe reference library, embeds it, and answers exam-style questions with citations back to source material.
@@ -90,7 +117,7 @@ A RAG-powered Q&A tool I built while studying for SAFe Practitioner 6.0 certific
 
 ---
 
-### 5. VOLT Supply — E-Commerce Backend & Product Sync Engine
+### 6. VOLT Supply — E-Commerce Backend & Product Sync Engine
 **Stack:** JavaScript · Shopify API · DigiKey API · Railway · Node.js
 
 Backend system for an electronics supply e-commerce store. Automates product catalog management, pricing, and inventory sync between DigiKey (distributor) and Shopify (storefront).
@@ -105,7 +132,7 @@ Backend system for an electronics supply e-commerce store. Automates product cat
 
 ---
 
-### 6. NeuroTracker — Affiliate Landing Page & Funnel
+### 7. NeuroTracker — Affiliate Landing Page & Funnel
 **Stack:** Next.js · Vercel · Conversion-optimized copy · AI-assisted content
 
 A conversion-optimized affiliate landing page for a cognitive-training platform targeting high-performance sports audiences. Built end-to-end — copy, design, deploy, analytics.
@@ -118,7 +145,7 @@ A conversion-optimized affiliate landing page for a cognitive-training platform 
 
 ---
 
-### 7. DLA GovCon Course — Productized Consulting Offering
+### 8. DLA GovCon Course — Productized Consulting Offering
 **Stack:** Course production · Sales funnel · Marketing automation
 
 A 7-module course teaching small businesses how to win Defense Logistics Agency contracts. Three tiers ($297 / $997 / $2,497) with an upsell pipeline from the companion published book.
@@ -127,7 +154,7 @@ A 7-module course teaching small businesses how to win Defense Logistics Agency 
 
 ---
 
-### 8. HVAC Lead-Gen Website — Built & Listed for Sale on Flippa
+### 9. HVAC Lead-Gen Website — Built & Listed for Sale on Flippa
 **Stack:** WordPress · Elementor · SEO · Conversion-focused UX
 
 A turnkey HVAC lead-generation website built from scratch as a productized digital asset — not a client engagement. SEO-optimized, mobile-responsive, conversion-focused. Listed on [Flippa](https://flippa.com/12756707-turnkey-hvac-lead-generation-website-on-wordpress-elementor-seo-optimized-mobile-responsive-conversion-focused-ready-to-monetize-in-a-288b-industry) for resale to local HVAC operators, agencies, or affiliate buyers wanting a plug-and-play lead funnel in a $288B industry.
@@ -140,7 +167,7 @@ Demonstrates a different skill from consulting work: niche selection, end-to-end
 
 ---
 
-### 9. "$38 Billion Opportunity" — AI-Co-Authored Published Book
+### 10. "$38 Billion Opportunity" — AI-Co-Authored Published Book
 **Format:** Published Book (Amazon, under pen name)
 
 *A Beginner's Guide to Winning DLA Contracts.* A full-length non-fiction book on winning Defense Logistics Agency contracts — **written and edited in collaboration with Claude** and published under the pen name Marcus Grant. I owned topic selection, outline, research, fact-checking, publishing, and marketing; Claude handled drafting and editorial passes.
