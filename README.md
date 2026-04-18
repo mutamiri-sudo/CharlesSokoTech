@@ -79,7 +79,34 @@ A production-grade fintech underwriting console that evaluates retail-business c
 
 ---
 
-### 3. BRD Agent — AI-Automated Requirements-to-Backlog Pipeline
+### 3. [The $38 Billion Opportunity](https://mutamiri-sudo.github.io/dla-opportunity/) — DLA Contracting Playbook ⭐
+**Stack:** Claude (co-author + narrative) · Amazon KDP · GitHub Pages · Tailwind · ElevenLabs + HeyGen (video pipeline) · CapCut · ConvertKit
+
+A productized consulting offering built solo — book, landing page, course ladder, and AI video marketing pipeline — targeting small-business owners and veterans pursuing Defense Logistics Agency contracts.
+
+**Problem.** The DLA awards roughly $38B/year, with ~40% reserved for small business. Most owners never apply — they get stuck on SAM.gov or assume federal contracts are only for the defense primes.
+
+**Market.** Small-business owners, veterans, and first-generation entrepreneurs pursuing a second revenue stream. Historically underserved by existing government-contracting training products.
+
+**What I shipped (solo, end-to-end):**
+- **The $38 Billion Opportunity** — full-length book, co-authored with Claude, published on Amazon KDP under the pen name Marcus Grant. $9.99 Kindle / $34.99 Paperback.
+- **Live landing page** — static site, Schwab-palette, conversion-focused, email capture → 3-message sequence → course upsell, deployed on GitHub Pages.
+- **Mr. Marcus video pipeline** — persona + voice guide + 10 TikTok/Reels/YouTube scripts (8 short-form + 2 long-form) + HeyGen/ElevenLabs/CapCut workflow + platform-specific captions.
+- **Course ladder** — 7-module GovCon Course at three tiers: Starter $297 → Builder $997 → Operator $2,497 (includes 1:1 coaching).
+
+**The architecture worth calling out:** same pattern as every project in this portfolio — **LLM for language and scale, deterministic systems for conversion and fulfillment.** Claude drafted the book, writes the video scripts, and powers the email sequence copy. The funnel itself (landing page, CTAs, price ladder, retargeting) runs deterministically — no AI in the critical path of a purchase.
+
+**Outcome target.** Book purchases drive email capture; sequence warms to course; course scales revenue without additional headcount. Price ladder captures readers ($9.99), serious learners ($297), and committed operators ($2,497+) from the same top-of-funnel traffic.
+
+🔗 **Landing page:** [mutamiri-sudo.github.io/dla-opportunity](https://mutamiri-sudo.github.io/dla-opportunity/)
+🔗 **Book on Amazon:** [a.co/d/0832fgXE](https://a.co/d/0832fgXE)
+🔗 **Landing repo:** [github.com/mutamiri-sudo/dla-opportunity](https://github.com/mutamiri-sudo/dla-opportunity)
+
+> Transparent about AI co-authorship: I owned topic selection, outline, research, fact-checking, publishing, and marketing. Claude handled drafting, editorial passes, video scripting, and landing-page narrative.
+
+---
+
+### 4. BRD Agent — AI-Automated Requirements-to-Backlog Pipeline
 **Stack:** Claude Code · Claude API · Node.js · Jira REST API · Prompt Engineering · AI Evals
 
 A Claude Code–powered agent that automates the entire manual workflow of turning a Business Requirements Document into a fully-structured Jira backlog. Instead of a PO / BA spending 1–2 weeks manually adding requirements to Jira as features and then breaking them down into user stories, the agent does it end-to-end:
@@ -99,7 +126,7 @@ A Claude Code–powered agent that automates the entire manual workflow of turni
 
 ---
 
-### 4. Gherkin Scenario Generator — Jira / Jira Align Integration
+### 5. Gherkin Scenario Generator — Jira / Jira Align Integration
 **Stack:** Claude API · Node.js · Jira REST API · Jira Align API
 
 A personal project exploring how LLMs can cut the time Product Owners spend on test documentation. Pulls user stories and acceptance criteria from Jira / Jira Align, generates BDD-style Gherkin scenarios, and writes them back to the story.
@@ -116,7 +143,7 @@ In my day job as a PO, writing Gherkin scenarios for a full backlog was one of t
 
 ---
 
-### 5. SAFe Cert RAG — Retrieval-Augmented Study Assistant
+### 6. SAFe Cert RAG — Retrieval-Augmented Study Assistant
 **Stack:** Node.js · React · RAG Architecture · Vector Embeddings · Claude API
 
 A RAG-powered Q&A tool I built while studying for SAFe Practitioner 6.0 certification. Ingests the SAFe reference library, embeds it, and answers exam-style questions with citations back to source material.
@@ -125,7 +152,7 @@ A RAG-powered Q&A tool I built while studying for SAFe Practitioner 6.0 certific
 
 ---
 
-### 6. VOLT Supply — E-Commerce Backend & Product Sync Engine
+### 7. VOLT Supply — E-Commerce Backend & Product Sync Engine
 **Stack:** JavaScript · Shopify API · DigiKey API · Railway · Node.js
 
 Backend system for an electronics supply e-commerce store. Automates product catalog management, pricing, and inventory sync between DigiKey (distributor) and Shopify (storefront).
@@ -140,7 +167,7 @@ Backend system for an electronics supply e-commerce store. Automates product cat
 
 ---
 
-### 7. NeuroTracker — Affiliate Landing Page & Funnel
+### 8. NeuroTracker — Affiliate Landing Page & Funnel
 **Stack:** Next.js · Vercel · Conversion-optimized copy · AI-assisted content
 
 A conversion-optimized affiliate landing page for a cognitive-training platform targeting high-performance sports audiences. Built end-to-end — copy, design, deploy, analytics.
@@ -150,15 +177,6 @@ A conversion-optimized affiliate landing page for a cognitive-training platform 
 🔗 **Live:** [neurotrackerx-landing.vercel.app](https://neurotrackerx-landing.vercel.app)
 
 📂 [View project details →](projects/neurotracker-landing.md)
-
----
-
-### 8. DLA GovCon Course — Productized Consulting Offering
-**Stack:** Course production · Sales funnel · Marketing automation
-
-A 7-module course teaching small businesses how to win Defense Logistics Agency contracts. Three tiers ($297 / $997 / $2,497) with an upsell pipeline from the companion published book.
-
-📂 [View project details →](projects/dla-govcon-course.md)
 
 ---
 
@@ -172,19 +190,6 @@ Demonstrates a different skill from consulting work: niche selection, end-to-end
 🔗 **Flippa Listing:** [View asset →](https://flippa.com/12756707-turnkey-hvac-lead-generation-website-on-wordpress-elementor-seo-optimized-mobile-responsive-conversion-focused-ready-to-monetize-in-a-288b-industry)
 
 📂 [View project details →](projects/hvac-website.md)
-
----
-
-### 10. "$38 Billion Opportunity" — AI-Co-Authored Published Book
-**Format:** Published Book (Amazon, under pen name)
-
-*A Beginner's Guide to Winning DLA Contracts.* A full-length non-fiction book on winning Defense Logistics Agency contracts — **written and edited in collaboration with Claude** and published under the pen name Marcus Grant. I owned topic selection, outline, research, fact-checking, publishing, and marketing; Claude handled drafting and editorial passes.
-
-Transparent about AI co-authorship. The book is a product experiment in using LLMs as a production tool for long-form content, and a lead magnet feeding the DLA GovCon Course.
-
-🔗 **Buy on Amazon:** [a.co/d/0cbzWrju](https://a.co/d/0cbzWrju)
-
-📂 [View project details →](projects/dla-book.md)
 
 ---
 
