@@ -79,7 +79,7 @@ A production-grade fintech underwriting console that evaluates retail-business c
 
 ---
 
-### 3. [The $38 Billion Opportunity](https://mutamiri-sudo.github.io/dla-opportunity/) — DLA Contracting Playbook ⭐
+### 3. [The $38 Billion Opportunity](https://dla-opportunity-landing.vercel.app/) — DLA Contracting Playbook ⭐
 **Stack:** Claude (co-author + narrative) · Amazon KDP · GitHub Pages · Tailwind · ElevenLabs + HeyGen (video pipeline) · CapCut · ConvertKit
 
 A productized consulting offering built solo — book, landing page, course ladder, and AI video marketing pipeline — targeting small-business owners and veterans pursuing Defense Logistics Agency contracts.
@@ -98,9 +98,8 @@ A productized consulting offering built solo — book, landing page, course ladd
 
 **Outcome target.** Book purchases drive email capture; sequence warms to course; course scales revenue without additional headcount. Price ladder captures readers ($9.99), serious learners ($297), and committed operators ($2,497+) from the same top-of-funnel traffic.
 
-🔗 **Landing page:** [mutamiri-sudo.github.io/dla-opportunity](https://mutamiri-sudo.github.io/dla-opportunity/)
+🔗 **Landing page:** [dla-opportunity-landing.vercel.app](https://dla-opportunity-landing.vercel.app/)
 🔗 **Book on Amazon:** [a.co/d/0832fgXE](https://a.co/d/0832fgXE)
-🔗 **Landing repo:** [github.com/mutamiri-sudo/dla-opportunity](https://github.com/mutamiri-sudo/dla-opportunity)
 
 > Transparent about AI co-authorship: I owned topic selection, outline, research, fact-checking, publishing, and marketing. Claude handled drafting, editorial passes, video scripting, and landing-page narrative.
 
